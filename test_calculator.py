@@ -1,3 +1,6 @@
+# https://github.com/HoangKhoi1234/lab11-MHK-JZ
+# Partner 1: Mai Hoang Khoi
+# Partner 2: Jessica Zhang
 import unittest
 from calculator import *
 
@@ -11,11 +14,16 @@ class TestCalculator(unittest.TestCase):
     # ##########################
 
     ######## Partner 1
-    # def test_multiply(self): # 3 assertions
-    #     fill in code
+    def test_multiply(self): # 3 assertions
+        self.assertEqual(multiply(2, 3), 6)
+        self.assertEqual(multiply(-4, 5), -20)
+        self.assertEqual(multiply(0, 9), 0)
 
-    # def test_divide(self): # 3 assertions
-    #     fill in code
+    def test_divide(self): # 3 assertions
+        # divide(a, b) returns b / a
+        self.assertEqual(divide(2, 10), 5)
+        self.assertAlmostEqual(divide(4, 2), 0.5)
+        self.assertEqual(divide(-5, 10), -2)
     # ##########################
 
     ######## Partner 2
@@ -34,21 +42,22 @@ class TestCalculator(unittest.TestCase):
     # ##########################
     
     ######## Partner 1
-    # def test_log_invalid_argument(self): # 1 assertion
-    #     # call log function inside, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #     logarithm(0, 5)
-    #     fill in code
+    def test_log_invalid_argument(self): # 1 assertion
+        with self.assertRaises(ValueError):
+            logarithm(5, 0)
 
-    # def test_hypotenuse(self): # 3 assertions
-    #     fill in code
+    def test_hypotenuse(self): # 3 assertions
+        self.assertAlmostEqual(hypotenuse(3, 4), 5)
+        self.assertAlmostEqual(hypotenuse(-3, 4), 5)
+        self.assertAlmostEqual(hypotenuse(0, 0), 0)
 
-    # def test_sqrt(self): # 3 assertions
-    #     # Test for invalid argument, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #    square_root(NUM)
-    #     # Test basic function
-    #     fill in code
+    def test_sqrt(self): # 3 assertions
+        # Test for invalid argument
+        with self.assertRaises(ValueError):
+            square_root(-1)
+        # Test basic function
+        self.assertAlmostEqual(square_root(9), 3)
+        self.assertAlmostEqual(square_root(2), 1.41421356, places=6)
     ##########################
 
 # Do not touch this
