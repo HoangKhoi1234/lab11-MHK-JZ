@@ -1,6 +1,6 @@
 # https://github.com/HoangKhoi1234/lab11-MHK-JZ
 # Partner 1: Mai Hoang Khoi
-# Partner 2: Jessica Zhang
+# Partner 2: Brandon W. Saintol
 """
 calculator.py
 - Defines functions used to create a simple calculator
